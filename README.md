@@ -9,11 +9,8 @@
 </h1>
 
 <p align="center">
-  <img src="https://dvfx9cgvtgnyd.cloudfront.net/hotshot/image-gen/gif_e8a50e1e-0b2e-4ebc-8229-817703585405.gif" alt="a barbie doll smiling in kitchen, oven on fire, disaster, pink wes anderson vibes, cinematic" width="195px" height="111.42px"/>
   &nbsp;
   <img src="https://dvfx9cgvtgnyd.cloudfront.net/hotshot/image-gen/gif_f6ca56a3-30b8-4b2a-9342-111353e85b96.gif" alt="a teddy bear writing a letter" width="195px" height="111.42px"/>
-  &nbsp;
-  <img src="https://dvfx9cgvtgnyd.cloudfront.net/hotshot/image-gen/gif_6c219102-7f72-45e9-b4fa-b7a07c004ae1.gif" alt="dslr photo of mark zuckerberg happy, pulling on threads, lots of threads everywhere, laughing, hd, 8k" width="195px" height="111.42px"/>
   &nbsp;
   <img src="https://dvfx9cgvtgnyd.cloudfront.net/hotshot/image-gen/gif_2dd3c30f-42c5-4f37-8fa6-b2494fcac4b4.gif" alt="a cat laughing" width="195px" height="111.42px"/>
   &nbsp;
@@ -80,11 +77,6 @@ python inference.py \
   --output="output.gif" 
 ```
 
-*What to Expect:*
-| **Prompt** | Sasquatch scuba diving | a camel smoking a cigarette | Ronald McDonald sitting at a vanity mirror putting on lipstick | drake licking his lips and staring through a window at a cupcake |
-|-----------|----------|----------|----------|----------|
-| **Output** | <img src="https://dvfx9cgvtgnyd.cloudfront.net/hotshot/image-gen/gif_441b7ea2-9887-4124-a52b-14c9db1d15aa.gif" />         |      <img src="https://dvfx9cgvtgnyd.cloudfront.net/hotshot/image-gen/gif_7956a022-0464-4441-88b8-15a6de953335.gif"/>    |    <img src="https://dvfx9cgvtgnyd.cloudfront.net/hotshot/image-gen/gif_35f55a64-7ed9-498e-894e-6ec7a8026fba.gif"/>      |  <img src="https://dvfx9cgvtgnyd.cloudfront.net/hotshot/image-gen/gif_df5f52cb-d74d-40b5-a066-2ce567dae512.gif"/>         |
-
 ### Text-to-GIF with personalized LORAs
 
 ```
@@ -94,14 +86,6 @@ python inference.py \
   --spatial_unet_base="path/to/stabilityai/stable-diffusion-xl-base-1.0/unet" \
   --lora="path/to/lora"
 ```
-
-*What to Expect:*
-
-*Note*: The outputs below use the DDIMScheduler.
-
-| **Prompt** | sks person screaming at a capri sun | sks person kissing kermit the frog | sks person wearing a tuxedo holding up a glass of champagne, fireworks in background, hd, high quality, 4K |
-|-----------|----------|----------|----------|
-| **Output** | <img src="https://dvfx9cgvtgnyd.cloudfront.net/hotshot/inf-temp/79a20eae-ffeb-4d24-8d22-609fa77c292f.gif" />         | <img src="https://dvfx9cgvtgnyd.cloudfront.net/hotshot/r/aakash.gif" />          |  <img src="https://dvfx9cgvtgnyd.cloudfront.net/hotshot/inf-temp/4fa34a16-2835-4a12-8c59-348caa4f3891.gif" />       |
 
 ### Text-to-GIF with ControlNet
 ```
@@ -115,12 +99,6 @@ python inference.py \
 By default, Hotshot-XL will create key frames from your source gif using 8 equally spaced frames and crop the keyframes to the default aspect ratio. For finer grained control, learn how to [vary aspect ratios](#varying-aspect-ratios) and [vary frame rates/lengths](#varying-frame-rates--lengths-experimental).
 
 Hotshot-XL currently supports the use of one ControlNet model at a time; supporting Multi-ControlNet would be [exciting](#-further-work).
-
-*What to Expect:*
-| **Prompt** | pixar style girl putting two thumbs up, happy, high quality, 8k, 3d, animated disney render | keanu reaves holding a sign that says "HELP", hd, high quality | a woman laughing, hd, high quality | barack obama making a rainbow with their hands, the word "MAGIC" in front of them, wearing a blue and white striped hoodie, hd, high quality |
-|-----------|----------|----------|----------|----------|
-| **Output** | <img src="https://dvfx9cgvtgnyd.cloudfront.net/hotshot/inf-temp/387d8b68-7289-45e3-9b21-1a9e6ad8a782.gif"/>         | <img src="https://dvfx9cgvtgnyd.cloudfront.net/hotshot%2Finf-temp/047543b2-d499-4de8-8fd2-3712c3a6c446.gif"/>          |  <img src="https://dvfx9cgvtgnyd.cloudfront.net/hotshot/inf-temp/8f50f4d8-4b86-4df7-a643-aae3e9d8634d.gif">       |  <img src="https://dvfx9cgvtgnyd.cloudfront.net/hotshot/inf-temp/c133d8b7-46ad-4469-84fd-b7f7444a47a0.gif"/>        |
-| **Control**  |<img src="https://media1.giphy.com/media/3o6Zt8qDiPE2d3kayI/giphy.gif?cid=ecf05e47igskj73xpl62pv8kyk9m39brlualxcz1j68vk8ul&ep=v1_gifs_related&rid=giphy.gif&ct=g"/>          | <img src="https://media2.giphy.com/media/IoXVrbzUIuvTy/giphy.gif?cid=ecf05e47ill5r35i1bhxk0tr7quqbpruqivjtuy7gcgkfmx5&ep=v1_gifs_search&rid=giphy.gif&ct=g"/>         |  <img src="https://media0.giphy.com/media/12msOFU8oL1eww/giphy.gif">        |  <img src="https://media4.giphy.com/media/3o84U6421OOWegpQhq/giphy.gif?cid=ecf05e47eufup08cz2up9fn9bitkgltb88ez37829mxz43cc&ep=v1_gifs_related&rid=giphy.gif&ct=g"/>        |
 
 ### Varying Aspect Ratios
 
